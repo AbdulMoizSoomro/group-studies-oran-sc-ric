@@ -1,0 +1,17 @@
+1774780083486 72/RMR [INFO] ric message routing library on SI95 p=4562 mv=3 flg=00 id=a (f447e29 4.9.4 built: Dec 13 2023)
+Traceback (most recent call last):
+  File "kpm_mon_xapp.py", line 147, in <module>
+    myXapp = MyXapp(config, args.http_server_port, args.rmr_port)
+  File "kpm_mon_xapp.py", line 10, in __init__
+    super(MyXapp, self).__init__(config, http_server_port, rmr_port)
+  File "/opt/xApps/lib/xAppBase.py", line 66, in __init__
+    self.httpServer = ricrest.ThreadedHTTPServer(self.MY_HTTP_SERVER_ADDRESS, self.MY_HTTP_SERVER_PORT)
+  File "/opt/ric-plt-xapp-frame-py/ricxappframe/xapp_rest.py", line 175, in __init__
+    self.server = self.server_class((host, port), self.handler)
+  File "/usr/local/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/local/lib/python3.8/http/server.py", line 139, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/local/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
