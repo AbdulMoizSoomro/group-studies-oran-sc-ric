@@ -55,6 +55,7 @@ WORKDIR /opt/
 
 # Install xApp Python Framework
 RUN pip install -e ./ric-plt-xapp-frame-py
+RUN pip3 install --no-cache-dir prometheus_client
 
 ENV LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib
 RUN chmod +x /opt/e2/rmr_probe
